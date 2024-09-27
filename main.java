@@ -18,17 +18,17 @@ public class main {
                 System.out.println(randm.fak_rek(n));
             }
             case 3 -> {
-                System.out.println("You selected fak_in. Please enter the number the program should use:");
+                System.out.print("You selected fak_in. Please enter the number the program should use:");
                 int n = in.nextInt();
                 System.out.print(randm.fak_in(n));
             }
             case 4 -> {
-                System.out.println("You selected bak_rek. Please enter the number the program should use:");
+                System.out.print("You selected bak_rek. Please enter the number the program should use:");
                 int n = in.nextInt();
                 System.out.print(randm.bak_rek(n));
             }
             case 5 -> {
-                System.out.println("You selected bak_in. Please enter the number the program should use:");
+                System.out.print("You selected bak_in. Please enter the number the program should use:");
                 int n = in.nextInt();
                 System.out.print(randm.bak_in(n));
             }

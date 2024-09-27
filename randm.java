@@ -25,12 +25,16 @@ public class randm {
         return erg;
     }
     public int bak_rek(int n){
-        return 1;
+        //TODO: finish that
+        if(n == 0){
+            return 0;
+        }
+        return bak_in(n-1)*2;
     }
     public int bak_in(int n){
-        int erg = 1;
-        for (int i = 1; i == n; i++){
-
+        int erg = 0;
+        for (int i = 1; i <= n; i++){
+            erg += i*2;
         }
         return erg;
     }
