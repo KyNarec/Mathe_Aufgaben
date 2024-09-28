@@ -37,5 +37,13 @@ public class AUFGABEN {
         return erg;
     }
 
+    public int hasen_rek(int n){
+        int paar = 1;
+        if(n<2) return 1;
+
+
+
+        return n;
+    }
     //TODO: PLIGIN Dark Themes, theme Mayukai Mirage
 }

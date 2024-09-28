@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+        GUI gui = new GUI();
+    }
+    public void alt(){
         Scanner in = new Scanner(System.in);
         AUFGABEN AUFGABEN = new AUFGABEN();
         System.out.print("What programm do you want to use? anzahlBegruessungen(1) fak_rek(2) fak_in(3) bak_rek(4) bak_in(5):");
