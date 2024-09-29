@@ -13,7 +13,8 @@ public class GUI implements ActionListener {
   private final String[] options = { "Anzahl der Begrüssungen", "Fakultät (rek)", "Fakultät (in)", "Bakterien (rek)",
       "Bakterien (in)", "Hasen (rek)" };
   private final AUFGABEN aufgaben;
-  GUI() {
+  GUI(int width, int height) {
+
     FlatDarkLaf.setup();
 
     aufgaben = new AUFGABEN();
@@ -84,7 +85,7 @@ public class GUI implements ActionListener {
     f.add(l2);
     f.setTitle("Aufgaben Rechner");
     f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
-    f.setSize(300, 300);
+    f.setSize(width, height);
     f.setLayout(null);
     f.setVisible(true);
     JFrame.setDefaultLookAndFeelDecorated(true);
@@ -164,6 +165,6 @@ public class GUI implements ActionListener {
   }
 
   public static void main(String[] args) {
-    new GUI();
+    new GUI(300, 300);
   }
 }

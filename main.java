@@ -7,15 +7,17 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class main {
     public static void main(String[] args) {
-        try {
-            UIManager.setLookAndFeel( new FlatLightLaf() );
-        } catch( Exception ex ) {
-            System.err.println( "Failed to initialize LaF" );
+        if (System.getProperty("os.name").startsWith("Windows")){
+            GUI gui = new GUI(325,350);
+        } else {
+            GUI gui = new GUI(300,300);
         }
-        //FlatDarkLaf.setup();
-
-        GUI gui = new GUI();
     }
+
+    public static String getOperatingSystem(){
+        return System.getProperty("os.name");
+    }
+
     public static void alt(){
         Scanner in = new Scanner(System.in);
         AUFGABEN AUFGABEN = new AUFGABEN();
