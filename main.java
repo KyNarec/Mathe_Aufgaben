@@ -1,7 +1,18 @@
 import java.util.Scanner;
+import com.formdev.flatlaf.*;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 
 public class main {
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel( new FlatLightLaf() );
+        } catch( Exception ex ) {
+            System.err.println( "Failed to initialize LaF" );
+        }
+        FlatDarkLaf.setup();
         GUI gui = new GUI();
     }
     public void alt(){
