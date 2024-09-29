@@ -12,7 +12,8 @@ public class main {
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }
-        FlatDarkLaf.setup();
+        //FlatDarkLaf.setup();
+
         GUI gui = new GUI();
     }
     public static void alt(){
