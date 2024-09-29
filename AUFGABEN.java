@@ -45,5 +45,7 @@ public class AUFGABEN {
 
         return n;
     }
-    //TODO: PLIGIN Dark Themes, theme Mayukai Mirage
+    /*
+        TODO: PLIGIN Dark Themes, theme Mayukai Mirage or Capuccin (also icons)
+     */
 }

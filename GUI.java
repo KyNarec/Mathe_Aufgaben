@@ -5,19 +5,21 @@ import java.awt.event.*;
 import com.formdev.flatlaf.*;
 
 public class GUI implements ActionListener {
-  private JTextField t1, t2, t3;
-  private JButton confirm;
-  private TextPrompt p1, p2, p3;
-  private JComboBox<String> c;
-  private String[] options = { "Anzahl der Begrüssungen", "Fakultät (rek)", "Fakultät (in)", "Bakterien (rek)",
+  private final JTextField t1, t2, t3;
+  private final JButton confirm;
+  private final TextPrompt p1, p2, p3;
+  private final JComboBox<String> c;
+  private final String[] options = { "Anzahl der Begrüssungen", "Fakultät (rek)", "Fakultät (in)", "Bakterien (rek)",
       "Bakterien (in)", "Hasen (rek)" };
-  private AUFGABEN aufgaben;
+  private final AUFGABEN aufgaben;
   GUI() {
 
     aufgaben = new AUFGABEN();
     JFrame f = new JFrame();
 
-    /**
+    final String[] options = { "Anzahl der Begrüssungen", "Fakultät (rek)", "Fakultät (in)", "Bakterien (rek)", "Bakterien (in)", "Hasen (rek)" };
+
+    /*
      * Selector for the different "aufgaben"
      */
     c = new JComboBox<>(options);
@@ -25,15 +27,15 @@ public class GUI implements ActionListener {
     //c.setFont(new Font(Font.SERIF, Font.PLAIN, 12));
     c.addActionListener(this);
 
-    /**
+    /*
      * Here you enter your base number
      */
     t1 = new JTextField();
     t1.setBounds(50, 100, 200, 25);
     p1 = new TextPrompt("Number to calculate", t1);
 
-    /**
-     * Here the result will be shown
+    /*
+      Here the result will be shown
      */
     t2 = new JTextField();
     t2.setBounds(50, 150, 200, 25);
@@ -42,7 +44,7 @@ public class GUI implements ActionListener {
     p2 = new TextPrompt("Press 'Calculate'", t2);
     //p2 = new TextPrompt("Press 'Calculate' to see result", t2);
 
-    /**
+    /*
      * The additional text field that's needed for some math problems
      */
     t3 = new JTextField();
@@ -51,7 +53,7 @@ public class GUI implements ActionListener {
     p3 = new TextPrompt("Additional value", t3);
     t3.setVisible(false);
     
-    /**
+    /*
      * Confirm Button
      */
     confirm = new JButton("Calculate");
@@ -69,7 +71,7 @@ public class GUI implements ActionListener {
     f.setSize(300, 300);
     f.setLayout(null);
     f.setVisible(true);
-    f.setDefaultLookAndFeelDecorated(true);
+    JFrame.setDefaultLookAndFeelDecorated(true);
 
   }
 
@@ -113,7 +115,7 @@ public class GUI implements ActionListener {
     }
   }
 
-  public int evaluateAufgabe(String aufgabe) {
+  public static int evaluateAufgabe(String aufgabe) {
     switch (aufgabe) {
       case "Anzahl der Begrüssungen" -> {
         return 1;
