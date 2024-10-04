@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) throws Exception {
         String os = System.getProperty("os.name");
-        if (Objects.equals(os, "Windows")){
+        if (Objects.equals(os, "Windows 10") | Objects.equals(os, "Windows 11")){
             GUI gui = new GUI(325,350);
         } else if (Objects.equals(os, "Linux")){
             GUI gui = new GUI(300,300);
